@@ -67,6 +67,12 @@ public:
   // signed altitude in centimeters (from GPGGA sentence)
   inline long altitude() { return _altitude; }
 
+  // signed altitude in centimeters (from GPGGA sentence)
+  inline float latitude() { return _latitude / 1000000.0; }
+
+  // signed altitude in centimeters (from GPGGA sentence)
+  inline float longitude() { return _longitude / 1000000.0; }
+
   // course in last full GPRMC sentence in 100th of a degree
   inline unsigned long course() { return _course; }
 
